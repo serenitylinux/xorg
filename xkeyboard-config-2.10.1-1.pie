@@ -1,0 +1,25 @@
+# vim: ft=sh
+name="xkeyboard-config"
+iteration="1"
+version="2.10.1"
+desc="X keyboard configuration files"
+bdeps="intltool xorg-xkbcomp"
+deps=""
+arch="any"
+flags=""
+src="http://xorg.freedesktop.org/releases/individual/data/$name/$name-$version.tar.bz2"
+
+function configure() {
+	./configure --prefix=/usr \
+	      --with-xkb-base=/usr/share/X11/xkb \
+	      --with-xkb-rules-symlink=xorg \
+	      --enable-compat-rules=yes
+}
+#build default
+#installpkg repo default
+function installpkg() {
+	default
+	rm -f "${dest_dir}/usr/share/X11/xkb/compiled"
+	install -m755 -d "${dest_dir}/var/lib/xkb"
+	install_license
+}

@@ -1,0 +1,53 @@
+# vim: ft=sh
+name="xorg-server"
+iteration="2"
+version="1.15.0"
+desc="Xorg X server"
+url="http://xorg.freedesktop.org"
+src="http://xorg.freedesktop.org/releases/individual/xserver/xorg-server-${version}.tar.bz2"
+bdeps="pixman libx11 libxfont xf86driproto dri3proto libpciaccess xorg-xauth libxau libdrm glproto mesa xcmiscproto bigreqsproto randrproto renderproto videoproto compositeproto recordproto presentproto xineramaproto libxkbfile xkeyboard-config xorg-xkbcomp xorg-setxkbmap"
+deps="libxfont libpciaccess libdrm pixman xf86-input-evdev mesa xkeyboard-config xorg-xkbcomp xorg-setxkbmap"
+arch="any"
+flags=""
+srcdir="$name-$version"
+
+
+function configure() {
+	./configure \
+		--enable-dri \
+	        --enable-dri \
+	        --enable-composite \
+		--enable-xvfb \
+		--enable-xorg \
+	        --enable-xephyr \
+	        --enable-composite \
+	        --enable-xcsecurity \
+	        --enable-glx-tls \
+	        --enable-install-setuid \
+		--enable-config-udev \
+	        --enable-record \
+		--disable-config-dbus \
+		--disable-xfbdev \
+		--disable-xfake \
+		--disable-static \
+		--sysconfdir=/etc/X11 \
+		--localstatedir=/var \
+		--with-fontrootdir=/usr/share/fonts
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+
+	install -m755 -d "${dest_dir}/usr/share/licenses/xorg-server"
+	install -m644 COPYING "${dest_dir}/usr/share/licenses/xorg-server/COPYING"
+
+	install -m755 -d "${dest_dir}/etc/X11"
+	mv "${dest_dir}/usr/share/X11/xorg.conf.d" "${dest_dir}/etc/X11/"
+
+#	rmdir "${dest_dir}/usr/share/X11"
+}
