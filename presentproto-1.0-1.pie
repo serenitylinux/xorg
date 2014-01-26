@@ -1,0 +1,16 @@
+# vim: ft=sh
+name="presentproto"
+iteration="1"
+version="1.0"
+desc="X11 Present protocol specification"
+bdeps=""
+deps=""
+arch="any"
+flags=""
+sdir="proto"
+
+#config default
+#build default
+function installpkg() {
+	default
+}

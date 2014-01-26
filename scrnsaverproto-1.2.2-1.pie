@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="scrnsaverproto"
+iteration="1"
+version="1.2.2"
+desc="X11 Screen Saver extension wire protocol"
+bdeps="xorg-util-macros"
+deps=""
+arch="any"
+flags=""
+sdir="proto"
+
+#config default
+#build default
+#installpkg repo default

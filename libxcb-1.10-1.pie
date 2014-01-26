@@ -1,0 +1,25 @@
+# vim: ft=sh
+name="libxcb"
+iteration="1"
+version="1.10"
+desc="X11 client-side library"
+deps="libxau"
+bdeps="pkg-config python2 xcb-proto curl autoconf automake libtool $deps"
+arch="any"
+flags=""
+sdir="xcb"
+
+
+function configure () {
+	curl -k "https://projects.archlinux.org/svntogit/packages.git/plain/trunk/libxcb-1.1-no-pthread-stubs.patch?h=packages/libxcb" -o no-pthread-stubs.patch
+	patch -Np1 -i ./no-pthread-stubs.patch
+	autoreconf -vfi
+
+  ./configure --prefix=/usr \
+    --enable-xinput \
+    --enable-xkb \
+    --disable-static
+}
+#config default
+#build default
+#installpkg repo default

@@ -1,0 +1,15 @@
+# vim: ft=sh
+name="libsm"
+iteration="1"
+version="1.2.2"
+desc="X11 Session Management library"
+deps="libice util-linux"
+bdeps="$deps xorg-util-macros xtrans"
+arch="any"
+flags=""
+sdir="lib"
+namecase="libSM"
+
+#config default
+#build default
+#installpkg repo default

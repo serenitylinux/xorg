@@ -1,0 +1,21 @@
+# vim: ft=sh
+name="libdrm"
+iteration="1"
+version="2.4.52"
+desc="Userspace interface to kernel DRM services"
+deps="glibc libpciaccess"
+bdeps="$deps valgrind autoconf automake libtool"
+arch="any"
+flags=""
+url="http://dri.freedesktop.org/"
+src="http://dri.freedesktop.org/$name/$name-$version.tar.bz2"
+
+function configure() {
+	 sed -i "/pthread-stubs/d" configure.ac
+	autoreconf --force --install
+	./configure --prefix=/usr --enable-udev
+}
+#build default
+function installpkg() {
+	default
+}

@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="inputproto"
+iteration="1"
+version="2.3"
+desc="X11 Input extension wire protocol"
+bdeps="xorg-util-macros"
+deps=""
+arch="any"
+flags=""
+sdir="proto"
+
+#config default
+#build default
+#installpkg repo default

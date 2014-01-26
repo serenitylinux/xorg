@@ -1,0 +1,40 @@
+# vim: ft=sh
+
+function ine() {
+	declare -f $1 &> /dev/null
+	[ "$?" -ne "0" ]
+}
+function isset() {
+	[ -z "$(eval echo \$$1)" ]
+}
+
+function ine_v() {
+	if isset $1; then
+		eval $1="$2"
+	fi
+}
+
+ine_v url "http://xorg.freedesktop.org"
+if isset $namecase; then
+	ine_v src "http://xorg.freedesktop.org/releases/individual/$sdir/${namecase}-${version}.tar.bz2"
+	ine_v srcdir "$namecase-$version"
+else
+	ine_v src "http://xorg.freedesktop.org/releases/individual/$sdir/${name}-${version}.tar.bz2"
+	ine_v srcdir "$name-$version"
+fi
+
+function install_license() {
+	install -m755 -d "${dest_dir}/usr/share/licenses/${name}"
+	install -m644 COPYING "${dest_dir}/usr/share/licenses/${name}/"
+}
+function fix_pkgconfig() {
+	install -m755 -d "${dest_dir}/usr/lib"
+	mv "${dest_dir}/usr/share/pkgconfig" "${dest_dir}/usr/lib/pkgconfig"
+}
+
+if ine installpkg; then
+	function installpkg() {
+		default
+		install_license
+	}
+fi

@@ -1,0 +1,25 @@
+# vim: ft=sh
+name="freetype2"
+iteration="1"
+version="2.5.2"
+desc="TrueType font rendering library"
+url="http://freetype.sourceforge.net"
+src="http://downloads.sourceforge.net/sourceforge/freetype/freetype-${version}.tar.bz2"
+deps="zlib bzip2 bash libpng"
+bdeps="$deps which"
+arch="any"
+flags=""
+srcdir="freetype-$version"
+
+
+function configure() {
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

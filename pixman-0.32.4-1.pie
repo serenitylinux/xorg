@@ -1,0 +1,20 @@
+# vim: ft=sh
+name="pixman"
+iteration="1"
+version="0.32.4"
+desc="The pixel-manipulation library for X and cairo"
+bdeps=""
+deps="glibc"
+arch="any"
+flags=""
+sdir="lib"
+
+function configure() {
+	./configure --prefix=/usr --disable-static --disable-xf86bigfont
+}
+
+function build() {
+	default
+}
+
+#use installpkg in default

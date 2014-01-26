@@ -1,0 +1,19 @@
+# vim: ft=sh
+name="xorg-util-macros"
+iteration="1"
+version="1.18.0"
+desc="X.Org Autotools macros"
+bdeps=""
+deps=""
+arch="any"
+flags=""
+srcdir="util-macros-$version"
+src="http://xorg.freedesktop.org/releases/individual/util/util-macros-${version}.tar.bz2"
+
+#config default
+#build default
+function installpkg() {
+  default
+  install_license
+  fix_pkgconfig
+}

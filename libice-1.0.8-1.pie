@@ -1,0 +1,15 @@
+# vim: ft=sh
+name="libice"
+iteration="1"
+version="1.0.8"
+desc="X11 Inter-Client Exchange library"
+bdeps="glibc xproto xtrans"
+deps="glibc xproto"
+arch="any"
+flags=""
+sdir="lib"
+namecase="libICE"
+
+#config default
+#build default
+#installpkg repo default

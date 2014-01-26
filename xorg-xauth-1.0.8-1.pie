@@ -1,0 +1,16 @@
+# vim: ft=sh
+name="xorg-xauth"
+iteration="1"
+version="1.0.8"
+desc="X.Org authorization settings program"
+bdeps="libxmu xorg-util-macros"
+deps="libxmu"
+arch="any"
+flags=""
+sdir="app"
+srcdir="xauth-$version"
+src="http://xorg.freedesktop.org/releases/individual/app/xauth-${version}.tar.bz2"
+
+#config default
+#build default
+#installpkg repo default

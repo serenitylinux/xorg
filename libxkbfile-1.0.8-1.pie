@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="libxkbfile"
+iteration="1"
+version="1.0.8"
+desc="X11 keyboard file manipulation library"
+bdeps="libx11 xorg-util-macros"
+deps="libx11"
+arch="any"
+flags=""
+sdir="lib"
+
+#config default
+#build default
+#installpkg repo default

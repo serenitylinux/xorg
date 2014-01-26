@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="renderproto"
+iteration="1"
+version="0.11.1"
+desc="X11 Render extension wire protocol"
+bdeps=""
+deps=""
+arch="any"
+flags=""
+sdir="proto"
+
+#config default
+#build default
+#installpkg repo default

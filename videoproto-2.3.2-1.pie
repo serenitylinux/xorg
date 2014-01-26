@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="videoproto"
+iteration="1"
+version="2.3.2"
+desc="X11 Video extension wire protocol"
+bdeps=""
+deps=""
+arch="any"
+flags=""
+sdir="proto"
+
+#config default
+#build default
+#installpkg repo default

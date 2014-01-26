@@ -1,0 +1,13 @@
+# vim: ft=sh
+name="dri2proto"
+iteration="1"
+version="2.8"
+desc="X11 DRI protocol"
+bdeps="xorg-util-macros"
+deps=""
+arch="any"
+flags=""
+sdir="proto"
+
+#config default
+#build default

@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="libvdpau"
+iteration="1"
+version="0.7"
+desc="Nvidia VDPAU library"
+deps="gcc libxext"
+bdeps="$deps dri2proto"
+arch="any"
+flags=""
+src="http://people.freedesktop.org/~aplattner/vdpau/${name}-${version}.tar.gz"
+
+#config default
+#build default
+#installpkg repo default

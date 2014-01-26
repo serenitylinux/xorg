@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="resourceproto"
+iteration="1"
+version="1.2.0"
+desc="X11 Resource extension wire protocol"
+bdeps="xorg-util-macros"
+deps=""
+arch="any"
+flags=""
+sdir="proto"
+
+#config default
+#build default
+#installpkg repo default
