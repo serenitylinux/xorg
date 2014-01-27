@@ -1,0 +1,19 @@
+# vim: ft=sh
+name="libxft"
+iteration="1"
+version="2.3.1"
+desc="FreeType-based font drawing library for X"
+bdeps="fontconfig libxrender pkg-config"
+deps="fontconfig libxrender"
+arch="any"
+flags=""
+sdir="lib"
+namecase="libXft"
+
+function configure() {
+	curl -k "https://projects.archlinux.org/svntogit/packages.git/plain/trunk/freetype_header.patch?h=packages/libxft" -o ft_header.patch
+	patch -Np1 -i ft_header.patch
+	./configure --prefix=/usr --sysconfdir=/etc --disable-static
+}
+#build default
+#installpkg repo default

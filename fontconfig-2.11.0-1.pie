@@ -1,0 +1,33 @@
+# vim: ft=sh
+name="fontconfig"
+iteration="1"
+version="2.11.0"
+desc="A library for configuring and customizing font access"
+bdeps="expat freetype2"
+deps="expat freetype2"
+arch="any"
+flags=""
+url="http://www.fontconfig.org/release/"
+src="http://www.fontconfig.org/release/$name-$version.tar.bz2"
+
+function configure() {
+	 # make sure there's no rpath trouble and sane .so versioning - FC and Gentoo do this as well
+	libtoolize -f
+	autoreconf -fi
+
+	./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--with-templatedir=/etc/fonts/conf.avail \
+		--with-xmldir=/etc/fonts \
+		--localstatedir=/var \
+		--disable-static \
+		--with-default-fonts=/usr/share/fonts \
+		--with-add-fonts=/usr/share/fonts
+}
+#build default
+#installpkg repo default
+
+
+function post_install() {
+	/usr/bin/fc-cache -f
+}

@@ -1,0 +1,23 @@
+# vim: ft=sh
+name="xorg-twm"
+iteration="1"
+version="1.0.8"
+desc="Tab Window Manager for the X Window System"
+bdeps="libxmu xorg-util-macros"
+deps="libxmu"
+arch="any"
+flags=""
+sdir="app"
+namecase="twm"
+
+
+#config default
+#build default
+#installpkg repo default
+
+function installpkg() {
+	default
+	install -m755 -d "${dest_dir}/etc/X11/twm"
+	install -m644 src/system.twmrc "${dest_dir}/etc/X11/twm/"
+	install_license
+}

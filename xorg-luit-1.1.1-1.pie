@@ -1,0 +1,20 @@
+# vim: ft=sh
+name="xorg-luit"
+iteration="1"
+version="1.1.1"
+desc="Filter that can be run between an arbitrary application and a UTF-8 terminal emulator"
+bdeps="libfontenc xorg-util-macros"
+deps="libfontenc"
+arch="any"
+flags=""
+sdir="app"
+namecase="luit"
+
+function configure() {
+	curl -k "https://projects.archlinux.org/svntogit/packages.git/plain/trunk/git_fixes.diff?h=packages/xorg-luit" -o git_fixes.patch
+	patch -Np1 -i git_fixes.patch
+	autoreconf -vfi
+	default
+}
+#build default
+#installpkg repo default
