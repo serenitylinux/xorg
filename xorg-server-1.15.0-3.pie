@@ -1,0 +1,58 @@
+# vim: ft=sh
+name="xorg-server"
+iteration="2"
+version="1.15.0"
+desc="Xorg X server"
+url="http://xorg.freedesktop.org"
+src="http://xorg.freedesktop.org/releases/individual/xserver/xorg-server-${version}.tar.bz2"
+bdeps="xf86driproto xcmiscproto bigreqsproto randrproto inputproto fontsproto videoproto presentproto compositeproto recordproto scrnsaverproto resourceproto xineramaproto renderproto xf86dgaproto dmxproto glproto dri2proto dri3proto"
+bdeps="$bdeps xcb-util xcb-util-image xcb-util-wm xcb-util-keysyms"
+bdeps="$bdeps libx11 libxv libpciaccess libxfont libxkbfile libxmu libxrender libxi libxaw libdmx libxres libxshmfence libxtst"
+bdeps="$bdeps xorg-xkbcomp xorg-util-macros xorg-font-util"
+bdeps="$bdeps pixman mesa xcmiscproto xtrans"
+deps="libxfont libpciaccess libdrm pixman xf86-input-evdev mesa xkeyboard-config xorg-xkbcomp xorg-setxkbmap"
+arch="any"
+flags=""
+srcdir="$name-$version"
+
+
+function configure() {
+	./configure \
+		--prefix=/usr \
+		--enable-dri \
+	        --enable-composite \
+		--enable-xvfb \
+		--enable-xorg \
+	        --enable-xephyr \
+	        --enable-composite \
+	        --enable-xcsecurity \
+	        --enable-glx-tls \
+	        --enable-install-setuid \
+		--enable-config-udev \
+	        --enable-record \
+		--disable-config-dbus \
+		--disable-xfbdev \
+		--disable-xfake \
+		--disable-static \
+		--sysconfdir=/etc/X11 \
+		--localstatedir=/var \
+	        --with-xkb-path=/usr/share/X11/xkb \
+	        --with-xkb-output=/var/lib/xkb \
+		--with-fontrootdir=/usr/share/fonts
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+
+	install -m755 -d "${dest_dir}/usr/share/licenses/xorg-server"
+	install -m644 COPYING "${dest_dir}/usr/share/licenses/xorg-server/COPYING"
+
+	install -m755 -d "${dest_dir}/etc/X11"
+	mv "${dest_dir}/usr/share/X11/xorg.conf.d" "${dest_dir}/etc/X11/"
+
+#	rmdir "${dest_dir}/usr/share/X11"
+}
