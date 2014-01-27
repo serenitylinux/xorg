@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="xorg-xrandr"
+iteration="1"
+version="1.4.1"
+desc="Primitive command line interface to RandR extension"
+bdeps="xorg-utils-macros libxrandr libx11"
+deps="libxrandr libx11"
+arch="any"
+flags=""
+sdir="app"
+
+#config default
+#build default
+#installpkg repo default
