@@ -1,0 +1,15 @@
+# vim: ft=sh
+name="libxi"
+iteration="1"
+version="1.7.2"
+desc="X11 Input extension library"
+deps="libxext inputproto"
+bdeps="libxext inputproto pkg-config xorg-util-macros libxfixes automake"
+arch="any"
+flags=""
+sdir="lib"
+namecase="libXi"
+
+#config default
+#build default
+#installpkg repo default

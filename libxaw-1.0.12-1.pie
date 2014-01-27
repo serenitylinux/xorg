@@ -1,0 +1,15 @@
+# vim: ft=sh
+name="libxaw"
+iteration="1"
+version="1.0.12"
+desc="X11 Athena Widget library"
+bdeps="libxmu libxpm xorg-util-macros"
+deps="libxmu libxpm"
+arch="any"
+flags=""
+sdir="lib"
+namecase="libXaw"
+
+#config default
+#build default
+#installpkg repo default

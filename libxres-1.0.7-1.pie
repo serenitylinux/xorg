@@ -1,0 +1,15 @@
+# vim: ft=sh
+name="libxres"
+iteration="1"
+version="1.0.7"
+desc="X11 Resource extension library"
+bdeps="libxext resourceproto damageproto compositeproto scrnsaverproto xorg-util-macros"
+deps="libxext"
+arch="any"
+flags=""
+sdir="lib"
+namecase="libXres"
+
+#config default
+#build default
+#installpkg repo default

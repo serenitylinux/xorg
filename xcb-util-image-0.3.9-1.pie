@@ -1,0 +1,17 @@
+# vim: ft=sh
+name="xcb-util-image"
+iteration="1"
+version="0.3.9"
+desc="Utility libraries for XC Binding - Port of Xlib's XImage and XShmImage functions"
+bdeps="libxcb xcb-util xorg-util-macros"
+deps="libxcb xcb-util"
+arch="any"
+flags=""
+sdir="xcb"
+
+#config default
+#build default
+#installpkg repo default
+function installpkg() {
+	default
+}

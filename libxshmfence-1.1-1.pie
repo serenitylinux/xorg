@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="libxshmfence"
+iteration="1"
+version="1.1"
+desc="A library that exposes a event API on top of Linux futexes"
+bdeps="glibc xorg-util-macros xproto"
+deps="glibc"
+arch="any"
+flags=""
+sdir="lib"
+
+#config default
+#build default
+#installpkg repo default

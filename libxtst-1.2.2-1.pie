@@ -1,0 +1,15 @@
+# vim: ft=sh
+name="libxtst"
+iteration="1"
+version="1.2.2"
+desc="X11 Testing -- Resource extension library"
+bdeps="libxext libxi recordproto inputproto libxfixes xorg-util-macros"
+deps="libxext libxi recordproto inputproto libxfixes"
+arch="any"
+flags=""
+sdir="lib"
+namecase="libXtst"
+
+#config default
+#build default
+#installpkg repo default

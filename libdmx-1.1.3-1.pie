@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="libdmx"
+iteration="1"
+version="1.1.3"
+desc="X11 Distributed Multihead extension library"
+bdeps="dmxproto libxext xorg-util-macros"
+deps="dmxproto libxext"
+arch="any"
+flags=""
+sdir="lib"
+
+#config default
+#build default
+#installpkg repo default
