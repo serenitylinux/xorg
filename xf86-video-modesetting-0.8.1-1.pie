@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="xf86-video-modesetting"
+iteration="1"
+version="0.8.1"
+desc="X.org generic modesetting video driver"
+bdeps="libdrm systemd xorg-server"
+deps="libdrm systemd"
+arch="any"
+flags=""
+sdir="driver"
+
+#config default
+#build default
+#installpkg repo default
