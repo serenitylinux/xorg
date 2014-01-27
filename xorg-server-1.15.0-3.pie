@@ -1,12 +1,12 @@
 # vim: ft=sh
 name="xorg-server"
-iteration="2"
+iteration="3"
 version="1.15.0"
 desc="Xorg X server"
 url="http://xorg.freedesktop.org"
 src="http://xorg.freedesktop.org/releases/individual/xserver/xorg-server-${version}.tar.bz2"
 bdeps="xf86driproto xcmiscproto bigreqsproto randrproto inputproto fontsproto videoproto presentproto compositeproto recordproto scrnsaverproto resourceproto xineramaproto renderproto xf86dgaproto dmxproto glproto dri2proto dri3proto"
-bdeps="$bdeps xcb-util xcb-util-image xcb-util-wm xcb-util-keysyms"
+bdeps="$bdeps xcb-util xcb-util-image xcb-util-wm xcb-util-keysyms libxdmcp"
 bdeps="$bdeps libx11 libxv libpciaccess libxfont libxkbfile libxmu libxrender libxi libxaw libdmx libxres libxshmfence libxtst"
 bdeps="$bdeps xorg-xkbcomp xorg-util-macros xorg-font-util"
 bdeps="$bdeps pixman mesa xcmiscproto xtrans"
@@ -30,6 +30,11 @@ function configure() {
 	        --enable-install-setuid \
 		--enable-config-udev \
 	        --enable-record \
+	        --enable-kdrive \
+	        --enable-kdrive-evdev \
+	        --enable-kdrive-kbd \
+	        --enable-kdrive-mouse \
+	        --enable-install-setuid \
 		--disable-config-dbus \
 		--disable-xfbdev \
 		--disable-xfake \
