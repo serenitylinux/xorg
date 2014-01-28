@@ -1,0 +1,51 @@
+# vim: ft=sh
+name="xorg-fonts-75dpi"
+iteration="1"
+version="1.0.3"
+desc="Xorg 75dpi fonts"
+deps="xorg-fonts-encodings xorg-fonts-alias xorg-font-util fontconfig xorg-bdftopcf"
+bdeps="$deps"
+arch="any"
+flags=""
+sdir=""
+src="none"
+
+fonts="adobe adobe-utopia bh bh-lucidatypewriter bitstream"
+
+function configure() {
+	for font in $fonts; do
+		curl -k ${url}/releases/individual/font/font-$font-75dpi-$version.tar.bz2 -o $font.tar.bz2
+		tar xf $font.tar.bz2 
+	done
+		
+	for font in $fonts; do
+		pushd font-$font-75dpi-$version 
+			./configure --prefix=/usr/ --with-fontdir=/usr/share/fonts/75dpi
+			make
+		popd
+	done
+}
+function build() {
+	
+	for font in $fonts; do
+		pushd font-$font-75dpi-$version 
+			make
+		popd
+	done
+}
+function installpkg() {
+	install -m755 -d ${dest_dir}/usr/share/licenses/${name}
+
+	for font in $fonts; do
+		pushd font-$font-75dpi-$version 
+			default 
+			install -m644 COPYING ${dest_dir}/usr/share/licenses/${name}/LICENSE.$name.$font 
+		popd
+	done
+	rm -rf ${dest_dir}/usr/share/fonts/75dpi/fonts.*
+}
+function post_install() {
+	fc-cache -f
+	mkfontscale /usr/share/fonts/75dpi
+	mkfontdir /usr/share/fonts/75dpi
+}

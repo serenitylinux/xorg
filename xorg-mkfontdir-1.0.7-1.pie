@@ -1,0 +1,15 @@
+# vim: ft=sh
+name="xorg-mkfontdir"
+iteration="1"
+version="1.0.7"
+desc="Create a index of directory font files for X"
+bdeps="bash xorg-util-macros xorg-mkfontscale"
+deps="bash xorg-mkfontscale"
+arch="any"
+flags=""
+sdir="app"
+namecase="mkfontdir"
+
+#config default
+#build default
+#installpkg repo default

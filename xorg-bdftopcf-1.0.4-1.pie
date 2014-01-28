@@ -1,0 +1,15 @@
+# vim: ft=sh
+name="xorg-bdftopcf"
+iteration="1"
+version="1.0.4"
+desc="Convert X font from BDF to PCF"
+bdeps="libxfont xorg-util-macros xproto"
+deps="libxfont"
+arch="any"
+flags=""
+sdir="app"
+namecase="bdftopcf"
+
+#config default
+#build default
+#installpkg repo default

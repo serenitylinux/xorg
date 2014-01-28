@@ -1,0 +1,17 @@
+# vim: ft=sh
+name="xorg-fonts-alias"
+iteration="1"
+version="1.0.3"
+desc="Xorg font alias"
+bdeps=""
+deps=""
+arch="any"
+flags=""
+sdir="font"
+namecase="font-alias"
+
+function configure() {
+	./configure --prefix=/usr --with-fontrootdir=/usr/share/fonts
+}
+#build default
+#installpkg repo default

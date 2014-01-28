@@ -1,0 +1,15 @@
+# vim: ft=sh
+name="xorg-mkfontscale"
+iteration="1"
+version="1.1.1"
+desc="Create a index of scalable font files for X"
+bdeps="freetype2 libfontenc xorg-util-macros xproto"
+deps="freetype2 libfontenc"
+arch="any"
+flags=""
+sdir="app"
+namecase="mkfontscale"
+
+#config default
+#build default
+#installpkg repo default
