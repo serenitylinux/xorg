@@ -38,3 +38,8 @@ if ine installpkg; then
 		install_license
 	}
 fi
+
+if [ "$src" == "none" ]; then
+	src=""
+	srcdir=""
+fi
