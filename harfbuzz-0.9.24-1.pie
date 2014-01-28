@@ -1,0 +1,19 @@
+# vim: ft=sh
+name="harfbuzz"
+iteration="1"
+version="0.9.24"
+desc="OpenType text shaping engine"
+bdeps="glib2 freetype2 graphite cairo icu gobject-introspection"
+deps="glib2 freetype2 graphite"
+arch="any"
+flags=""
+src="http://www.freedesktop.org/software/harfbuzz/release/${name}-${version}.tar.bz2"
+
+function configure() {
+	#with cairo
+	./configure --prefix=/usr \
+	    --with-glib --with-freetype --with-icu --with-graphite2 \
+	    --with-gobject
+}
+#build default
+#installpkg repo default

@@ -1,0 +1,28 @@
+# vim: ft=sh
+name="graphite"
+iteration="1"
+version="1.2.4"
+desc="reimplementation of the SIL Graphite text processing engine"
+bdeps="cmake freetype2 python2"
+url="http://projects.palaso.org/projects/graphitedev"
+src="http://downloads.sourceforge.net/project/silgraphite/graphite2/graphite2-${version}.tgz"
+deps="gcc"
+arch="any"
+flags=""
+namecase="graphite2"
+srcdir=$namecase-$version
+
+function configure() {
+	cmake -G "Unix Makefiles" . \
+	-DCMAKE_C_FLAGS:STRING="${CFLAGS}" \
+	-DCMAKE_INSTALL_PREFIX=/usr \
+	-DCMAKE_BUILD_TYPE:STRING=Release \
+	-DGRAPHITE2_COMPARE_RENDERER=OFF 
+	find . -type f ! -name "rules" ! -name "changelog" -exec sed -i -e 's/\-O3//g' {} \;
+}
+#build default
+function pkginstall() {
+	default
+	mkdir -p "${dest_dir}"/usr/share/licenses/${name}
+	install -m644 COPYING "${dest_dir}"/usr/share/licenses/${name}/ 
+}

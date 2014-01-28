@@ -1,0 +1,21 @@
+# vim: ft=sh
+name="shared-mime-info"
+iteration="1"
+version="1.2"
+desc="Freedesktop.org Shared MIME Info"
+bdeps="intltool pkg-config"
+deps="libxml2 glib2"
+arch="any"
+flags=""
+src="http://freedesktop.org/~hadess/${name}-${version}.tar.xz"
+
+function configure() {
+	./configure --prefix=/usr --disable-update-mimedb
+}
+#build default
+function build() {
+	make -j1
+}
+function installpkg() {
+	default
+}
