@@ -1,0 +1,14 @@
+# vim: ft=sh
+name="desktop-file-utils"
+iteration="1"
+version="0.22"
+desc="Command Line utilities for working with desktop files"
+bdeps="glib2"
+deps="glib2"
+arch="any"
+flags=""
+src="http://www.freedesktop.org/software/$name/releases/$name-$version.tar.xz" 
+
+#config default
+#build default
+#installpkg repo default

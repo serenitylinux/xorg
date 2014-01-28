@@ -1,0 +1,16 @@
+# vim: ft=sh
+name="udisks"
+iteration="1"
+version="1.0.4"
+desc="Disk Management Service"
+bdeps="intltool sg3_utils dbus-glib polkit device-mapper libatasmart"
+deps="util-linux glib2 parted dbus-glib polkit device-mapper libatasmart"
+arch="any"
+flags=""
+src="http://hal.freedesktop.org/releases/${name}-${version}.tar.gz"
+
+function configure() {
+	./configure --prefix=/usr --disable-man-pages --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib/udisks --disable-static
+}
+#build default
+#installpkg repo default
