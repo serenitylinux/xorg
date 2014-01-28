@@ -3,11 +3,12 @@ name="xorg-xrandr"
 iteration="1"
 version="1.4.1"
 desc="Primitive command line interface to RandR extension"
-bdeps="xorg-utils-macros libxrandr libx11"
+bdeps="xorg-util-macros libxrandr libx11"
 deps="libxrandr libx11"
 arch="any"
 flags=""
 sdir="app"
+namecase="xrandr"
 
 #config default
 #build default
