@@ -9,7 +9,7 @@ bdeps="dbus-glib python2"
 deps="dbus-core"
 arch="any"
 flags=""
-srcdir="$name-$version"
+srcdir="dbus-python-$version"
 
 
 function configure() {
