@@ -1,0 +1,26 @@
+# vim: ft=sh
+name="python-dbus"
+iteration="1"
+version="1.2.0"
+desc="Python bindings for DBUS"
+url="http://www.freedesktop.org/wiki/Software/DBusBindings"
+src="http://dbus.freedesktop.org/releases/${dbus-python}/${dbus-python}-${version}.tar.gz"
+bdeps="dbus-glib python2"
+deps="dbus-core"
+arch="any"
+flags=""
+srcdir="$name-$version"
+
+
+function configure() {
+	PYTHON=python2.7 ../${dbus-python}-${version}/configure --prefix=/usr
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}
