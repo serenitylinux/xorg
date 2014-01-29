@@ -1,0 +1,21 @@
+# vim: ft=sh
+name="glamor-egl"
+iteration="1"
+version="0.6.0"
+desc="OpenGL base 2d rendering acceleration library"
+bdeps="mesa xorg-server"
+deps="$bdeps"
+arch="any"
+flags=""
+sdir="driver"
+ext="tar.bz2"
+
+function configure() {
+	./configure --prefix=/usr \
+		--disable-static \
+		--enable-glx-tls \
+		--enable-xv
+}
+#config default
+#build default
+#installpkg repo default
