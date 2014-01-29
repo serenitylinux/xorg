@@ -2,7 +2,7 @@
 name="libice"
 iteration="1"
 version="1.0.8"
-desc="X11 Inter-Client Exchange library"
+desc="X11 InterClient Exchange Library"
 bdeps="glibc xproto xtrans"
 deps="glibc xproto"
 arch="any"
