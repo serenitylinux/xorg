@@ -13,7 +13,7 @@ srcdir="dbus-python-$version"
 
 
 function configure() {
-	PYTHON=python2.7 ../${dbus-python}-${version}/configure --prefix=/usr
+	PYTHON=python2.7 ./configure --prefix=/usr
 	default
 }
 
