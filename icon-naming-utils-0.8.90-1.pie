@@ -1,0 +1,25 @@
+# vim: ft=sh
+name="icon-naming-utils"
+iteration="1"
+version="0.8.90"
+desc="Icon mapping for tango"
+bdeps="perl-xml-simple"
+deps="$bdeps"
+arch="any"
+flags=""
+src="http://tango.freedesktop.org/releases/$name-$version.tar.bz2"
+url="http://tango.freedesktop.org/"
+
+function configure() {
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--libexecdir=/usr/lib/icon-naming-utils \
+		--localstatedir=/var
+
+}
+#build default
+function installpkg() {
+	default
+	mv $dest_dir/usr/share/pkgconfig $dest_dir/usr/lib/pkgconfig
+}
