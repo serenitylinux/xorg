@@ -1,0 +1,33 @@
+# vim: ft=sh
+name="polkit"
+iteration="2"
+version="0.112"
+desc="Application development toolkit for controlling system-wide privileges"
+bdeps="glib2 pam expat systemd mozjs"
+deps="glib2 pam expat systemd"
+arch="any"
+flags=""
+src="http://www.freedesktop.org/software/polkit/releases/$name-$version.tar.gz"
+
+function configure() {
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--libexecdir=/usr/lib/polkit-1 \
+		--enable-libsystemd-login=yes \
+		--disable-man-pages \
+		--disable-static 
+}
+#build default
+function installpkg() {
+	default
+	chown 102 $dest_dir/etc/polkit-1/rules.d
+	chown 102 $dest_dir/usr/share/polkit-1/rules.d
+}
+
+function post_install() {
+	getent group polkitd || groupadd -g 102 polkitd	
+	getent passwd polkitd || useradd -u 102 -c "Polkitd" -g polkitd -d '/' -s /bin/false polkitd
+	passwd -l polkitd
+}
