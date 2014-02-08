@@ -1,10 +1,10 @@
 # vim: ft=sh
 name="libxfont"
-iteration="1"
+iteration="2"
 version="1.4.7"
 desc="X11 font rasterisation library"
-bdeps="freetype2 libfontenc xproto fontsproto"
-deps="xorg-util-macros xtrans"
+bdeps="freetype2 libfontenc xproto fontsproto xtrans"
+deps="xorg-util-macros xtrans libfontenc freetype2 fontsproto"
 arch="any"
 flags=""
 sdir="lib"

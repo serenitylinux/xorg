@@ -1,9 +1,9 @@
 # vim: ft=sh
 name="shared-mime-info"
-iteration="1"
+iteration="2"
 version="1.2"
 desc="Freedesktop.org Shared MIME Info"
-bdeps="intltool pkg-config"
+bdeps="intltool pkg-config libxml2"
 deps="libxml2 glib2"
 arch="any"
 flags=""

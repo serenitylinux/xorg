@@ -1,9 +1,9 @@
 # vim: ft=sh
 name="udisks"
-iteration="1"
+iteration="2"
 version="1.0.4"
 desc="Disk Management Service"
-bdeps="intltool sg3_utils dbus-glib polkit device-mapper libatasmart"
+bdeps="intltool sg3_utils parted dbus-glib polkit device-mapper libatasmart"
 deps="util-linux glib2 parted dbus-glib polkit device-mapper libatasmart"
 arch="any"
 flags=""

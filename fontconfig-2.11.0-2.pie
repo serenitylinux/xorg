@@ -1,9 +1,9 @@
 # vim: ft=sh
 name="fontconfig"
-iteration="1"
+iteration="2"
 version="2.11.0"
 desc="A library for configuring and customizing font access"
-bdeps="expat freetype2"
+bdeps="expat freetype2 libtool autoconf automake"
 deps="expat freetype2"
 arch="any"
 flags=""

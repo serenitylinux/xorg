@@ -1,9 +1,9 @@
 # vim: ft=sh
 name="libxcomposite"
-iteration="1"
+iteration="2"
 version="0.4.4"
 desc="X11 Composite extension library"
-bdeps="xorg-util-macros"
+bdeps="xorg-util-macros compositeproto libx11 libxfixes"
 deps="libxfixes compositeproto"
 arch="any"
 flags=""

@@ -1,10 +1,10 @@
 # vim: ft=sh
 name="glproto"
-iteration="1"
+iteration="2"
 version="1.4.17"
 desc="X11 OpenGL extension wire protocol"
 bdeps=""
-deps=""
+deps="libxdamage libxxf86vm"
 arch="any"
 flags=""
 sdir="proto"

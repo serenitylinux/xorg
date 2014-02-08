@@ -1,0 +1,20 @@
+# vim: ft=sh
+name="xf86-input-synaptics"
+iteration="2"
+version="1.7.3"
+deps="libxtst mtdev"
+bdeps="$deps libxi libx11 xorg-server"
+desc="Synaptics driver for notebook touchpads"
+arch="any"
+flags=""
+sdir="driver"
+
+#config default
+#build default
+function installpkg() {
+	default
+	install_license
+	
+	install -m755 -d "${dest_dir}/etc/X11/xorg.conf.d"
+	install -m644 conf/50-synaptics.conf "${dest_dir}/etc/X11/xorg.conf.d/"
+}

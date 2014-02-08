@@ -1,10 +1,10 @@
 # vim: ft=sh
 name="libxrender"
-iteration="1"
+iteration="2"
 version="0.9.8"
 desc="X Rendering Extension client library"
 deps="libx11 renderproto"
-ddeps="$deps pkg-config"
+bdeps="$deps pkg-config"
 arch="any"
 flags=""
 sdir="lib"

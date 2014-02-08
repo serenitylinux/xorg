@@ -1,9 +1,9 @@
 # vim: ft=sh
 name="xorg-util-macros"
-iteration="1"
+iteration="2"
 version="1.18.0"
 desc="X.Org Autotools macros"
-bdeps=""
+bdeps="bison flex"
 deps=""
 arch="any"
 flags=""
