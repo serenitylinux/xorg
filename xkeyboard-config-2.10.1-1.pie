@@ -3,11 +3,11 @@ name="xkeyboard-config"
 iteration="1"
 version="2.10.1"
 desc="X keyboard configuration files"
-bdeps="intltool xorg-xkbcomp"
-deps=""
-arch="any"
-flags=""
-src="http://xorg.freedesktop.org/releases/individual/data/$name/$name-$version.tar.bz2"
+bdeps=('intltool' 'xorg-xkbcomp')
+deps=()
+arch=('any')
+flags=()
+src=('http://xorg.freedesktop.org/releases/individual/data/xkeyboard-config/xkeyboard-config-2.10.1.tar.bz2')
 
 function configure() {
 	./configure --prefix=/usr \

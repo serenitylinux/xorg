@@ -3,10 +3,10 @@ name="xineramaproto"
 iteration="1"
 version="1.2.1"
 desc="X11 Xinerama extension wire protocol"
-bdeps="xorg-util-macros"
-deps=""
-arch="any"
-flags=""
+bdeps=('xorg-util-macros')
+deps=()
+arch=('any')
+flags=()
 sdir="proto"
 
 #config default

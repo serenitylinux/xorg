@@ -3,10 +3,10 @@ name="xcb-util"
 iteration="1"
 version="0.3.9"
 desc="Utility libraries for XC Binding"
-bdeps="libxcb xorg-util-macros"
-deps="libxcb"
-arch="any"
-flags=""
+bdeps=('libxcb' 'xorg-util-macros')
+deps=('libxcb')
+arch=('any')
+flags=()
 sdir="xcb"
 
 #config default

@@ -4,11 +4,11 @@ iteration="1"
 version="1.6.8"
 desc="A collection of routines used to create PNG format graphics files"
 url="http://www.libpng.org/pub/png/libpng.html"
-src="http://downloads.sourceforge.net/sourceforge/$name/$name-$version.tar.xz"
-bdeps="zlib bash"
-deps="zlib bash"
-arch="any"
-flags=""
+src=('http://downloads.sourceforge.net/sourceforge/libpng/libpng-1.6.8.tar.xz')
+bdeps=('zlib' 'bash')
+deps=('zlib' 'bash')
+arch=('any')
+flags=()
 srcdir="$name-$version"
 
 

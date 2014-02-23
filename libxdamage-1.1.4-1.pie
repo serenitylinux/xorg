@@ -3,10 +3,10 @@ name="libxdamage"
 iteration="1"
 version="1.1.4"
 desc="X11 damaged region extension library"
-deps="libxfixes damageproto"
-bdeps="pkg-config $deps"
-arch="any"
-flags=""
+deps=('libxfixes' 'damageproto')
+bdeps=('pkg-config' 'libxfixes' 'damageproto')
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libXdamage"
 

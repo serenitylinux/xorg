@@ -3,11 +3,11 @@ name="hicolor-icon-theme"
 iteration="1"
 version="0.12"
 desc="Freedesktop.org Hicolor icon theme"
-bdeps=""
-deps=""
-arch="any"
-flags=""
-src="http://icon-theme.freedesktop.org/releases/$name-$version.tar.gz"
+bdeps=()
+deps=()
+arch=('any')
+flags=()
+src=('http://icon-theme.freedesktop.org/releases/hicolor-icon-theme-0.12.tar.gz')
 url="http://icon-theme.freedesktop.org/wiki/HicolorTheme"
 
 function installpkg() {

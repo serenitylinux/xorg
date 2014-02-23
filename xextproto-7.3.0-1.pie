@@ -3,10 +3,10 @@ name="xextproto"
 iteration="1"
 version="7.3.0"
 desc="X11 various extension wire protocol"
-bdeps="xorg-util-macros"
-deps=""
-arch="any"
-flags=""
+bdeps=('xorg-util-macros')
+deps=()
+arch=('any')
+flags=()
 sdir="proto"
 
 #config default

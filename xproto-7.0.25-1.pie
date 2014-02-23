@@ -3,9 +3,9 @@ name="xproto"
 iteration="1"
 version="7.0.25"
 desc="X11 core wire protocol and auxiliary headers"
-bdeps="xorg-util-macros"
-arch="any"
-flags=""
+bdeps=('xorg-util-macros')
+arch=('any')
+flags=()
 sdir="proto"
 
 #config default

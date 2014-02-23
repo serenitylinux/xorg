@@ -3,10 +3,10 @@ name="xorg-luit"
 iteration="2"
 version="1.1.1"
 desc="Filter that can be run between an arbitrary application and a UTF-8 terminal emulator"
-bdeps="libfontenc xorg-util-macros automake autoconf"
-deps="libfontenc"
-arch="any"
-flags=""
+bdeps=('libfontenc' 'xorg-util-macros' 'automake' 'autoconf')
+deps=('libfontenc')
+arch=('any')
+flags=()
 sdir="app"
 namecase="luit"
 

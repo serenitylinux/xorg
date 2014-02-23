@@ -3,12 +3,12 @@ name="xorg-fonts-75dpi"
 iteration="1"
 version="1.0.3"
 desc="Xorg 75dpi fonts"
-deps="xorg-fonts-encodings xorg-fonts-alias xorg-font-util fontconfig xorg-bdftopcf"
-bdeps="$deps xorg-mkfontdir xorg-mkfontscale"
-arch="any"
-flags=""
+deps=('xorg-fonts-encodings' 'xorg-fonts-alias' 'xorg-font-util' 'fontconfig' 'xorg-bdftopcf')
+bdeps=('xorg-fonts-encodings' 'xorg-fonts-alias' 'xorg-font-util' 'fontconfig' 'xorg-bdftopcf' 'xorg-mkfontdir' 'xorg-mkfontscale')
+arch=('any')
+flags=()
 sdir=""
-src="none"
+src=('none')
 
 fonts="adobe adobe-utopia bh bh-lucidatypewriter bitstream"
 

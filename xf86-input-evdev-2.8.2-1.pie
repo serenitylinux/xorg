@@ -3,10 +3,10 @@ name="xf86-input-evdev"
 iteration="1"
 version="2.8.2"
 desc="X.org evdev input driver"
-deps="glibc systemd mtdev"
-bdeps="$deps resourceproto scrnsaverproto xorg-server"
-arch="any"
-flags=""
+deps=('glibc' 'systemd' 'mtdev')
+bdeps=('glibc' 'systemd' 'mtdev' 'resourceproto' 'scrnsaverproto' 'xorg-server')
+arch=('any')
+flags=()
 sdir="driver"
 
 #config default

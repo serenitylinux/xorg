@@ -3,10 +3,10 @@ name="libsm"
 iteration="1"
 version="1.2.2"
 desc="X11 Session Management library"
-deps="libice util-linux"
-bdeps="$deps xorg-util-macros xtrans"
-arch="any"
-flags=""
+deps=('libice' 'util-linux')
+bdeps=('libice' 'util-linux' 'xorg-util-macros' 'xtrans')
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libSM"
 

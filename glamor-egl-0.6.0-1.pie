@@ -3,10 +3,10 @@ name="glamor-egl"
 iteration="1"
 version="0.6.0"
 desc="OpenGL base 2d rendering acceleration library"
-bdeps="mesa xorg-server"
-deps="$bdeps"
-arch="any"
-flags=""
+bdeps=('mesa' 'xorg-server')
+deps=('mesa' 'xorg-server')
+arch=('any')
+flags=()
 sdir="driver"
 ext="tar.bz2"
 

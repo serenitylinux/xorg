@@ -3,11 +3,11 @@ name="polkit"
 iteration="1"
 version="0.112"
 desc="Application development toolkit for controlling system-wide privileges"
-bdeps="glib2 pam expat systemd mozjs"
-deps="glib2 pam expat systemd"
-arch="any"
-flags=""
-src="http://www.freedesktop.org/software/polkit/releases/$name-$version.tar.gz"
+bdeps=('glib2' 'pam' 'expat' 'systemd' 'mozjs')
+deps=('glib2' 'pam' 'expat' 'systemd')
+arch=('any')
+flags=()
+src=('http://www.freedesktop.org/software/polkit/releases/polkit-0.112.tar.gz')
 
 function configure() {
 	./configure \

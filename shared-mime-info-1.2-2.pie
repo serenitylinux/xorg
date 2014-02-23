@@ -3,11 +3,11 @@ name="shared-mime-info"
 iteration="2"
 version="1.2"
 desc="Freedesktop.org Shared MIME Info"
-bdeps="intltool pkg-config libxml2"
-deps="libxml2 glib2"
-arch="any"
-flags=""
-src="http://freedesktop.org/~hadess/${name}-${version}.tar.xz"
+bdeps=('intltool' 'pkg-config' 'libxml2')
+deps=('libxml2' 'glib2')
+arch=('any')
+flags=()
+src=('http://freedesktop.org/~hadess/shared-mime-info-1.2.tar.xz')
 
 function configure() {
 	./configure --prefix=/usr --disable-update-mimedb

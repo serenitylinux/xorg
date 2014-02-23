@@ -2,11 +2,11 @@
 name="xf86-input-synaptics"
 iteration="1"
 version="1.7.3"
-deps="libxtst mtdev"
-bdeps="$deps presentproto dri3proto dri2proto glproto xf86driproto fontsproto libxi resourceproto libx11 scrnsaverproto"
+deps=('libxtst' 'mtdev')
+bdeps=('libxtst' 'mtdev' 'presentproto' 'dri3proto' 'dri2proto' 'glproto' 'xf86driproto' 'fontsproto' 'libxi' 'resourceproto' 'libx11' 'scrnsaverproto')
 desc="Synaptics driver for notebook touchpads"
-arch="any"
-flags=""
+arch=('any')
+flags=()
 sdir="driver"
 
 #config default

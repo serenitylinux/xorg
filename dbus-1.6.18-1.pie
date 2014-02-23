@@ -4,11 +4,11 @@ iteration="1"
 version="1.6.18"
 desc="Freedesktop.org message bus system"
 url="http://www.freedesktop.org/Software/dbus"
-src="http://dbus.freedesktop.org/releases/dbus/dbus-$version.tar.gz"
-bdeps="systemd"
-deps="expat"
-arch="any"
-flags=""
+src=('http://dbus.freedesktop.org/releases/dbus/dbus-1.6.18.tar.gz')
+bdeps=('systemd')
+deps=('expat')
+arch=('any')
+flags=()
 srcdir="$name-$version"
 
 

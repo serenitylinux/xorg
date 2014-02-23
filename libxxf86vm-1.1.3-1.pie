@@ -3,10 +3,10 @@ name="libxxf86vm"
 iteration="1"
 version="1.1.3"
 desc="X11 XFree86 video mode extension library"
-deps="libxext xf86vidmodeproto"
-bdeps="xorg-util-macros $deps"
-arch="any"
-flags=""
+deps=('libxext' 'xf86vidmodeproto')
+bdeps=('xorg-util-macros' 'libxext' 'xf86vidmodeproto')
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libXxf86vm"
 

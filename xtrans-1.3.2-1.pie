@@ -3,10 +3,10 @@ name="xtrans"
 iteration="1"
 version="1.3.2"
 desc="X transport library"
-bdeps=""
-deps=""
-arch="any"
-flags=""
+bdeps=()
+deps=()
+arch=('any')
+flags=()
 sdir="lib"
 
 #config default

@@ -3,12 +3,12 @@ name="graphite"
 iteration="1"
 version="1.2.4"
 desc="reimplementation of the SIL Graphite text processing engine"
-bdeps="cmake freetype2 python2"
+bdeps=('cmake' 'freetype2' 'python2')
 url="http://projects.palaso.org/projects/graphitedev"
-src="http://downloads.sourceforge.net/project/silgraphite/graphite2/graphite2-${version}.tgz"
-deps="gcc"
-arch="any"
-flags=""
+src=('http://downloads.sourceforge.net/project/silgraphite/graphite2/graphite2-1.2.4.tgz')
+deps=('gcc')
+arch=('any')
+flags=()
 namecase="graphite2"
 srcdir=$namecase-$version
 

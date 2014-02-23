@@ -3,12 +3,12 @@ name="xterm"
 iteration="1"
 version="301"
 desc="X Terminal Emulator"
-deps="libxft libxaw ncurses xorg-luit xbitmaps"
-bdeps="$deps"
-arch="any"
-flags=""
+deps=('libxft' 'libxaw' 'ncurses' 'xorg-luit' 'xbitmaps')
+bdeps=('libxft' 'libxaw' 'ncurses' 'xorg-luit' 'xbitmaps')
+arch=('any')
+flags=()
 url="http://invisible-island.net/xterm/"
-src="ftp://invisible-island.net/${name}/${name}-${version}.tgz"
+src=('ftp://invisible-island.net/xterm/xterm-301.tgz')
 
 function configure() {
 	./configure \

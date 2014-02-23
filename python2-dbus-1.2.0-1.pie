@@ -4,11 +4,11 @@ iteration="1"
 version="1.2.0"
 desc="Python bindings for DBUS"
 url="http://www.freedesktop.org/wiki/Software/DBusBindings"
-src="http://dbus.freedesktop.org/releases/dbus-python/dbus-python-${version}.tar.gz"
-bdeps="dbus-glib python2"
-deps="dbus"
-arch="any"
-flags=""
+src=('http://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.0.tar.gz')
+bdeps=('dbus-glib' 'python2')
+deps=('dbus')
+arch=('any')
+flags=()
 srcdir="dbus-python-$version"
 
 

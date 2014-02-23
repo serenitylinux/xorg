@@ -3,10 +3,10 @@ name="xorg-iceauth"
 iteration="1"
 version="1.0.6"
 desc="ICE auth file utility"
-bdeps="xorg-util-macros xproto libice"
-deps="libice"
-arch="any"
-flags=""
+bdeps=('xorg-util-macros' 'xproto' 'libice')
+deps=('libice')
+arch=('any')
+flags=()
 sdir="app"
 namecase="iceauth"
 

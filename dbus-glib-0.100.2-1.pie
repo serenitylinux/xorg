@@ -3,11 +3,11 @@ name="dbus-glib"
 iteration="1"
 version="0.100.2"
 desc="Glib bindings for DBus"
-bdeps="dbus glib2 pkg-config"
-deps="dbus glib2"
-arch="any"
-flags=""
-src="http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz"
+bdeps=('dbus' 'glib2' 'pkg-config')
+deps=('dbus' 'glib2')
+arch=('any')
+flags=()
+src=('http://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.100.2.tar.gz')
 
 function configure() {
 	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-static=no --enable-bash-completion=no

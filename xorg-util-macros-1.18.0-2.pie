@@ -3,12 +3,12 @@ name="xorg-util-macros"
 iteration="2"
 version="1.18.0"
 desc="X.Org Autotools macros"
-bdeps="bison flex"
-deps=""
-arch="any"
-flags=""
+bdeps=('bison' 'flex')
+deps=()
+arch=('any')
+flags=()
 srcdir="util-macros-$version"
-src="http://xorg.freedesktop.org/releases/individual/util/util-macros-${version}.tar.bz2"
+src=('http://xorg.freedesktop.org/releases/individual/util/util-macros-1.18.0.tar.bz2')
 
 #config default
 #build default

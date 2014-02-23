@@ -3,12 +3,12 @@ name="fontconfig"
 iteration="2"
 version="2.11.0"
 desc="A library for configuring and customizing font access"
-bdeps="expat freetype2 libtool autoconf automake"
-deps="expat freetype2"
-arch="any"
-flags=""
+bdeps=('expat' 'freetype2' 'libtool' 'autoconf' 'automake')
+deps=('expat' 'freetype2')
+arch=('any')
+flags=()
 url="http://www.fontconfig.org/release/"
-src="http://www.fontconfig.org/release/$name-$version.tar.bz2"
+src=('http://www.fontconfig.org/release/fontconfig-2.11.0.tar.bz2')
 
 function configure() {
 	 # make sure there's no rpath trouble and sane .so versioning - FC and Gentoo do this as well

@@ -3,10 +3,10 @@ name="libice"
 iteration="1"
 version="1.0.8"
 desc="X11 InterClient Exchange Library"
-bdeps="glibc xproto xtrans"
-deps="glibc xproto"
-arch="any"
-flags=""
+bdeps=('glibc' 'xproto' 'xtrans')
+deps=('glibc' 'xproto')
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libICE"
 

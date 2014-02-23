@@ -3,11 +3,11 @@ name="udisks"
 iteration="2"
 version="1.0.4"
 desc="Disk Management Service"
-bdeps="intltool sg3_utils parted dbus-glib polkit device-mapper libatasmart"
-deps="util-linux glib2 parted dbus-glib polkit device-mapper libatasmart"
-arch="any"
-flags=""
-src="http://hal.freedesktop.org/releases/${name}-${version}.tar.gz"
+bdeps=('intltool' 'sg3_utils' 'parted' 'dbus-glib' 'polkit' 'device-mapper' 'libatasmart')
+deps=('util-linux' 'glib2' 'parted' 'dbus-glib' 'polkit' 'device-mapper' 'libatasmart')
+arch=('any')
+flags=()
+src=('http://hal.freedesktop.org/releases/udisks-1.0.4.tar.gz')
 
 function configure() {
 	./configure --prefix=/usr --disable-man-pages --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib/udisks --disable-static

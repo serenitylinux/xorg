@@ -3,10 +3,10 @@ name="xorg-xrdb"
 iteration="1"
 version="1.1.0"
 desc="X server resource database utility"
-deps="libx11 libxmu"
-bdeps="xorg-util-macros $deps"
-arch="any"
-flags=""
+deps=('libx11' 'libxmu')
+bdeps=('xorg-util-macros' 'libx11' 'libxmu')
+arch=('any')
+flags=()
 sdir="app"
 namecase="xrdb"
 

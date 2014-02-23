@@ -3,12 +3,12 @@ name="wayland"
 iteration="1"
 version="1.4.0"
 desc="A computer display server protocol"
-bdeps="libffi expat"
-deps="libffi expat"
-arch="any"
-flags=""
+bdeps=('libffi' 'expat')
+deps=('libffi' 'expat')
+arch=('any')
+flags=()
 url="http://wayland.freedesktop.org"
-src="http://wayland.freedesktop.org/releases/$name-$version.tar.xz"
+src=('http://wayland.freedesktop.org/releases/wayland-1.4.0.tar.xz')
 
 function configure() {
 	./configure --prefix=/usr/ --disable-documentation --disable-static

@@ -3,10 +3,10 @@ name="libxrender"
 iteration="2"
 version="0.9.8"
 desc="X Rendering Extension client library"
-deps="libx11 renderproto"
-bdeps="$deps pkg-config"
-arch="any"
-flags=""
+deps=('libx11' 'renderproto')
+bdeps=('libx11' 'renderproto' 'pkg-config')
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libXrender"
 

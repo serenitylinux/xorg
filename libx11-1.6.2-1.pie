@@ -3,10 +3,10 @@ name="libx11"
 iteration="1"
 version="1.6.2"
 desc="X11 client-side library"
-deps="libxcb xproto kbproto"
-bdeps="xorg-util-macros xextproto xtrans inputproto $deps"
-arch="any"
-flags=""
+deps=('libxcb' 'xproto' 'kbproto')
+bdeps=('xorg-util-macros' 'xextproto' 'xtrans' 'inputproto' 'libxcb' 'xproto' 'kbproto')
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libX11"
 

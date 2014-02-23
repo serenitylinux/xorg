@@ -40,6 +40,6 @@ if ine installpkg; then
 fi
 
 if [ "$src" == "none" ]; then
-	src=""
+src=('ftp://invisible-island.net/xterm/xterm-301.tgz')
 	srcdir=""
 fi

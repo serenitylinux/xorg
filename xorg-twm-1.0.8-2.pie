@@ -3,10 +3,10 @@ name="xorg-twm"
 iteration="1"
 version="1.0.8"
 desc="Tab Window Manager for the X Window System"
-bdeps="libxmu xorg-util-macros bison flex"
-deps="libxmu"
-arch="any"
-flags=""
+bdeps=('libxmu' 'xorg-util-macros' 'bison' 'flex')
+deps=('libxmu')
+arch=('any')
+flags=()
 sdir="app"
 namecase="twm"
 

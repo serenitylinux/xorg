@@ -5,9 +5,9 @@ version="2.99.907"
 desc="X.org Intel i810/i830/i915/945G/G965+ video drivers"
 #mesa untill broken into intel-dri
 deps="mesa libxvmc pixman xcb-util" #TODO glamor-egl
-bdeps="xorg-server libx11 libxrender"
-arch="any"
-flags=""
+bdeps=('xorg-server' 'libx11' 'libxrender')
+arch=('any')
+flags=()
 sdir="driver"
 
 #config default

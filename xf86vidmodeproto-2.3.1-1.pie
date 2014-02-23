@@ -3,10 +3,10 @@ name="xf86vidmodeproto"
 iteration="1"
 version="2.3.1"
 desc="X11 Video Mode extension wire protocol"
-bdeps="xorg-util-macros"
-deps=""
-arch="any"
-flags=""
+bdeps=('xorg-util-macros')
+deps=()
+arch=('any')
+flags=()
 sdir="proto"
 
 #config default

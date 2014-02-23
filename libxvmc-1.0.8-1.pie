@@ -3,10 +3,10 @@ name="libxvmc"
 iteration="1"
 version="1.0.8"
 desc=""
-bdeps="libxv pkg-config"
-deps="libxv"
-arch="any"
-flags=""
+bdeps=('libxv' 'pkg-config')
+deps=('libxv')
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libXvMC"
 

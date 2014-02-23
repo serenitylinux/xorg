@@ -3,10 +3,10 @@ name="libxfixes"
 iteration="1"
 version="5.0.1"
 desc="X11 miscellaneous 'fixes' extension library"
-deps="libx11 fixesproto"
-bdeps="xorg-util-macros $deps"
-arch="any"
-flags=""
+deps=('libx11' 'fixesproto')
+bdeps=('xorg-util-macros' 'libx11' 'fixesproto')
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libXfixes"
 

@@ -3,10 +3,10 @@ name="xf86-video-ati"
 iteration="1"
 version="7.3.0"
 desc="Xorg ati video driver"
-deps="xorg-server systemd mesa glamor-egl"
-bdeps="$deps randrproto"
-arch="any"
-flags=""
+deps=('xorg-server' 'systemd' 'mesa' 'glamor-egl')
+bdeps=('xorg-server' 'systemd' 'mesa' 'glamor-egl' 'randrproto')
+arch=('any')
+flags=()
 sdir="driver"
 
 #config default

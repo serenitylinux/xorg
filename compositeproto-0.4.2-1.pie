@@ -3,10 +3,10 @@ name="compositeproto"
 iteration="1"
 version="0.4.2"
 desc="X11 Composite extension wire protocol"
-bdeps="xorg-util-macros fixesproto"
-deps="fixesproto"
-arch="any"
-flags=""
+bdeps=('xorg-util-macros' 'fixesproto')
+deps=('fixesproto')
+arch=('any')
+flags=()
 sdir="proto"
 
 #config default

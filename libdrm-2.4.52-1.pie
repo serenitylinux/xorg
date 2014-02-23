@@ -3,12 +3,12 @@ name="libdrm"
 iteration="1"
 version="2.4.52"
 desc="Userspace interface to kernel DRM services"
-deps="glibc libpciaccess"
-bdeps="$deps valgrind autoconf automake libtool"
-arch="any"
-flags=""
+deps=('glibc' 'libpciaccess')
+bdeps=('glibc' 'libpciaccess' 'valgrind' 'autoconf' 'automake' 'libtool')
+arch=('any')
+flags=()
 url="http://dri.freedesktop.org/"
-src="http://dri.freedesktop.org/$name/$name-$version.tar.bz2"
+src=('http://dri.freedesktop.org/libdrm/libdrm-2.4.52.tar.bz2')
 
 function configure() {
 	 sed -i "/pthread-stubs/d" configure.ac

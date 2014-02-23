@@ -3,10 +3,10 @@ name="libxt"
 iteration="1"
 version="1.1.4"
 desc="X11 toolkit intrinsics library"
-bdeps="libsm libx11 xorg-util-macros"
-deps="libsm libx11"
-arch="any"
-flags=""
+bdeps=('libsm' 'libx11' 'xorg-util-macros')
+deps=('libsm' 'libx11')
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libXt"
 

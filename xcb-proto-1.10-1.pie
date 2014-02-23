@@ -3,10 +3,10 @@ name="xcb-proto"
 iteration="1"
 version="1.10"
 desc="XML-XCB protocol descriptions"
-bdeps="python2"
-deps=""
-arch="any"
-flags=""
+bdeps=('python2')
+deps=()
+arch=('any')
+flags=()
 sdir="xcb"
 
 #config default

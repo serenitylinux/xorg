@@ -3,11 +3,11 @@ name="icon-naming-utils"
 iteration="1"
 version="0.8.90"
 desc="Icon mapping for tango"
-bdeps="perl-xml-simple"
-deps="$bdeps"
-arch="any"
-flags=""
-src="http://tango.freedesktop.org/releases/$name-$version.tar.bz2"
+bdeps=('perl-xml-simple')
+deps=('perl-xml-simple')
+arch=('any')
+flags=()
+src=('http://tango.freedesktop.org/releases/icon-naming-utils-0.8.90.tar.bz2')
 url="http://tango.freedesktop.org/"
 
 function configure() {

@@ -3,10 +3,10 @@ name="xf86-input-keyboard"
 iteration="1"
 version="1.8.0"
 desc="X.Org keyboard input driver"
-bdeps="glibc xorg-server resourceproto scrnsaverproto "
-deps="glibc"
-arch="any"
-flags=""
+bdeps=('glibc' 'xorg-server' 'resourceproto' 'scrnsaverproto')
+deps=('glibc')
+arch=('any')
+flags=()
 sdir="driver"
 
 #config default

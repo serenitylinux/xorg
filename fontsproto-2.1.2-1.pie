@@ -3,10 +3,10 @@ name="fontsproto"
 iteration="1"
 version="2.1.2"
 desc="X11 font extension wire protocol"
-bdeps="xorg-util-macros"
-deps=""
-arch="any"
-flags=""
+bdeps=('xorg-util-macros')
+deps=()
+arch=('any')
+flags=()
 sdir="proto"
 
 #config default

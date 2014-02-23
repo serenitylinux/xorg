@@ -3,10 +3,10 @@ name="libxcb"
 iteration="1"
 version="1.10"
 desc="X11 client-side library"
-deps="libxau"
-bdeps="pkg-config python2 xcb-proto curl autoconf automake libtool $deps"
-arch="any"
-flags=""
+deps=('libxau')
+bdeps=('pkg-config' 'python2' 'xcb-proto' 'curl' 'autoconf' 'automake' 'libtool' 'libxau')
+arch=('any')
+flags=()
 sdir="xcb"
 
 

@@ -4,10 +4,10 @@ iteration="3"
 version="10.0.2"
 desc="A open-source implementation of the OpenGL specification"
 url="http://mesa3d.sourceforge.net"
-src="http://cgit.freedesktop.org/mesa/mesa/snapshot/mesa-mesa-10.0.2.tar.gz"
-bdeps="python2 libxml2 libx11 glproto libdrm dri2proto libxxf86vm libxdamage libvdpau systemd wayland llvm elfutils autoconf automake libtool bison flex libxdmcp"
-deps="libxxf86vm libdrm"
-arch="any"
+src=('http://cgit.freedesktop.org/mesa/mesa/snapshot/mesa-mesa-10.0.2.tar.gz')
+bdeps=('python2' 'libxml2' 'libx11' 'glproto' 'libdrm' 'dri2proto' 'libxxf86vm' 'libxdamage' 'libvdpau' 'systemd' 'wayland' 'llvm' 'elfutils' 'autoconf' 'automake' 'libtool' 'bison' 'flex' 'libxdmcp')
+deps=('libxxf86vm' 'libdrm')
+arch=('any')
 flags="" #ati-dri intel-dri nouveau-dri svga-dri libgl
 srcdir="$name-$name-$version"
 

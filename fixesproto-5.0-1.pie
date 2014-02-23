@@ -3,10 +3,10 @@ name="fixesproto"
 iteration="1"
 version="5.0"
 desc=""
-deps="xproto xextproto"
-bdeps="xorg-util-macros"
-arch="any"
-flags=""
+deps=('xproto' 'xextproto')
+bdeps=('xorg-util-macros')
+arch=('any')
+flags=()
 sdir="proto"
 
 #config default

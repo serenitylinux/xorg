@@ -3,10 +3,10 @@ name="libpciaccess"
 iteration="1"
 version="0.13.2"
 desc="X11 PCI access library"
-bdeps="xorg-util-macros"
-deps="glibc"
-arch="any"
-flags=""
+bdeps=('xorg-util-macros')
+deps=('glibc')
+arch=('any')
+flags=()
 sdir="lib"
 
 #config default

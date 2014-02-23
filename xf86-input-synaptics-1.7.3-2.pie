@@ -2,11 +2,11 @@
 name="xf86-input-synaptics"
 iteration="2"
 version="1.7.3"
-deps="libxtst mtdev"
-bdeps="$deps libxi libx11 xorg-server"
+deps=('libxtst' 'mtdev')
+bdeps=('libxtst' 'mtdev' 'libxi' 'libx11' 'xorg-server')
 desc="Synaptics driver for notebook touchpads"
-arch="any"
-flags=""
+arch=('any')
+flags=()
 sdir="driver"
 
 #config default

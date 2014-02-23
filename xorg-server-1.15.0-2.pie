@@ -4,15 +4,15 @@ iteration="2"
 version="1.15.0"
 desc="Xorg X server"
 url="http://xorg.freedesktop.org"
-src="http://xorg.freedesktop.org/releases/individual/xserver/xorg-server-${version}.tar.bz2"
+src=('http://xorg.freedesktop.org/releases/individual/xserver/xorg-server-1.15.0.tar.bz2')
 bdeps="xf86driproto xcmiscproto bigreqsproto randrproto inputproto fontsproto videoproto presentproto compositeproto recordproto scrnsaverproto resourceproto xineramaproto renderproto xf86dgaproto dmxproto glproto dri2proto dri3proto"
 bdeps="$bdeps xcb-util xcb-util-image xcb-util-wm xcb-util-keysyms"
 bdeps="$bdeps libx11 libxv libpciaccess libxfont libxkbfile libxmu libxrender libxi libxaw libdmx libxres libxshmfence libxtst"
 bdeps="$bdeps xorg-xkbcomp xorg-util-macros xorg-font-util"
 bdeps="$bdeps pixman mesa xcmiscproto xtrans"
 deps="libxfont libpciaccess libdrm pixman xf86-input-evdev mesa xkeyboard-config xorg-xkbcomp xorg-setxkbmap"
-arch="any"
-flags=""
+arch=('any')
+flags=()
 srcdir="$name-$version"
 
 

@@ -3,10 +3,10 @@ name="pixman"
 iteration="1"
 version="0.32.4"
 desc="The pixel-manipulation library for X and cairo"
-bdeps=""
-deps="glibc"
-arch="any"
-flags=""
+bdeps=()
+deps=('glibc')
+arch=('any')
+flags=()
 sdir="lib"
 
 function configure() {

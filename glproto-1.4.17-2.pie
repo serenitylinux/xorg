@@ -3,10 +3,10 @@ name="glproto"
 iteration="2"
 version="1.4.17"
 desc="X11 OpenGL extension wire protocol"
-bdeps=""
-deps="libxdamage libxxf86vm"
-arch="any"
-flags=""
+bdeps=()
+deps=('libxdamage' 'libxxf86vm')
+arch=('any')
+flags=()
 sdir="proto"
 
 #config default

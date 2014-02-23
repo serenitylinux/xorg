@@ -3,10 +3,10 @@ name="libxinerama"
 iteration="2"
 version="1.1.3"
 desc="X11 Xinerama extension library"
-bdeps="xorg-util-macros libx11 libxext xineramaproto"
-deps="libxext xineramaproto"
-arch="any"
-flags=""
+bdeps=('xorg-util-macros' 'libx11' 'libxext' 'xineramaproto')
+deps=('libxext' 'xineramaproto')
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libXinerama"
 

@@ -3,10 +3,10 @@ name="xf86-input-mouse"
 iteration="1"
 version="1.9.0"
 desc="X.org mouse input driver"
-bdeps="glibc xorg-server resourceproto scrnsaverproto"
-deps="glibc"
-arch="any"
-flags=""
+bdeps=('glibc' 'xorg-server' 'resourceproto' 'scrnsaverproto')
+deps=('glibc')
+arch=('any')
+flags=()
 sdir="driver"
 
 #config default

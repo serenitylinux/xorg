@@ -4,11 +4,11 @@ iteration="1"
 version="2.5.2"
 desc="TrueType font rendering library"
 url="http://freetype.sourceforge.net"
-src="http://downloads.sourceforge.net/sourceforge/freetype/freetype-${version}.tar.bz2"
-deps="zlib bzip2 bash libpng"
-bdeps="$deps which"
-arch="any"
-flags=""
+src=('http://downloads.sourceforge.net/sourceforge/freetype/freetype-2.5.2.tar.bz2')
+deps=('zlib' 'bzip2' 'bash' 'libpng')
+bdeps=('zlib' 'bzip2' 'bash' 'libpng' 'which')
+arch=('any')
+flags=()
 srcdir="freetype-$version"
 
 

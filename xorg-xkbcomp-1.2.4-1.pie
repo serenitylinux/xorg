@@ -3,10 +3,10 @@ name="xorg-xkbcomp"
 iteration="1"
 version="1.2.4"
 desc="X Keyboard description compiler"
-bdeps="libxkbfile"
-deps="libxkbfile xorg-util-macros"
-arch="any"
-flags=""
+bdeps=('libxkbfile')
+deps=('libxkbfile' 'xorg-util-macros')
+arch=('any')
+flags=()
 sdir="app"
 namecase="xkbcomp"
 

@@ -2,11 +2,11 @@
 name="libxpm"
 iteration="1"
 version="3.5.11"
-bdeps="libxt libxext xorg-util-macros"
-deps="libxt libxext"
+bdeps=('libxt' 'libxext' 'xorg-util-macros')
+deps=('libxt' 'libxext')
 desc="X11 pixmap library"
-arch="any"
-flags=""
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libXpm"
 

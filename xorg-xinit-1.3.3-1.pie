@@ -3,10 +3,10 @@ name="xorg-xinit"
 iteration="1"
 version="1.3.3"
 desc="X.Org initialisation program"
-bdeps="libx11 xorg-xauth xorg-util-macros"
-deps="libx11 xorg-xauth"
-arch="any"
-flags=""
+bdeps=('libx11' 'xorg-xauth' 'xorg-util-macros')
+deps=('libx11' 'xorg-xauth')
+arch=('any')
+flags=()
 sdir="app"
 namecase="xinit"
 

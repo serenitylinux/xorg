@@ -3,10 +3,10 @@ name="libxmu"
 iteration="1"
 version="1.1.2"
 desc="X11 miscellaneous micro-utility library"
-deps="libxext libxt"
-bdeps="$deps xorg-util-macros"
-arch="any"
-flags=""
+deps=('libxext' 'libxt')
+bdeps=('libxext' 'libxt' 'xorg-util-macros')
+arch=('any')
+flags=()
 sdir="lib"
 namecase="libXmu"
 
